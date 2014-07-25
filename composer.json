@@ -1,0 +1,18 @@
+{
+    "require": {
+        "silex/silex": "~1.0",
+        "willdurand/hateoas": "~2.0",
+        "monolog/monolog": ">=1.0.0"
+    },
+    "require-dev": {
+        "behat/behat": "~3.0",
+        "sanpi/behatch-contexts": "dev-master",
+        "behat/mink-extension": "2.0.*@dev"
+    },
+    "autoload": {
+        "psr-0": { "Api": "src" }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}

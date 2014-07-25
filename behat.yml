@@ -1,0 +1,10 @@
+default:
+    extensions:
+        Sanpi\Behatch\Extension: ~
+    suites:
+        default:
+            contexts:
+                - behatch:browser
+                - behatch:debug
+                - behatch:json
+                - behatch:rest
