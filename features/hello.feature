@@ -1,7 +1,6 @@
-# features/table.feature
-Feature: Hello
+Feature: API
 
-  Scenario: Hello 1
-    When I request "/hello/tata"
-    Then the response status code should be 200
-     And the response is JSON
+  Scenario: API Entry point
+    Given I send a "GET" request to "http://localhost:4000/"
+     Then the response should be in JSON
+     Then the response should be equal to "200"

@@ -4,6 +4,7 @@ namespace Api\Controller;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class ApiController
 {
@@ -11,7 +12,6 @@ class ApiController
     {
         $app->log(sprintf("Hello '%s'.", $request->get('name')));
 
-        var_dump($request->get('name'));
         die("tata");
     }
 }

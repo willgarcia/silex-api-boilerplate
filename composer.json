@@ -7,10 +7,15 @@
     "require-dev": {
         "behat/behat": "~3.0",
         "sanpi/behatch-contexts": "dev-master",
-        "behat/mink-extension": "2.0.*@dev"
+        "behat/mink": "~1.6@dev",
+        "behat/mink-extension": "2.0.*@dev",
+        "behat/mink-goutte-driver": "1.1.*@dev",
+        "behat/mink-browserkit-driver": "~1.2@dev"
     },
     "autoload": {
-        "psr-0": { "Api": "src" }
+        "psr-0": {
+            "Api": "src"
+        }
     },
     "config": {
         "bin-dir": "bin/"

@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('Europe/Paris');
+
 require_once __DIR__.'/../vendor/autoload.php';
 
 use Api\Api;
@@ -11,7 +13,7 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
 ));
 
 $app
-    ->get('/test/{name}', 'Api\Controller\ApiController::indexAction')
+    ->get('/', 'Api\Controller\ApiController::indexAction')
 ;
 
 return $app;
