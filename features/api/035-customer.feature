@@ -1,3 +1,4 @@
+@api
 Feature: Customer
 
   Scenario: Customer - Detail
@@ -5,6 +6,7 @@ Feature: Customer
     Then the response should be in JSON
     Then the response code should be equal to "200"
     Then the response content should be equal to:
+      """
       {
         "id": "%my_sugar_id%",
         "name": "My Customer",
@@ -14,6 +16,7 @@ Feature: Customer
           "licenses": "/api/customers/%my_sugar_id%/licenses"
         }
       }
+      """
 
   Scenario: Customer - Not found
     Given I send a "GET" request to "/api/customers/%unknown_id%" with an header "Authorization: Token MY-TOKEN"

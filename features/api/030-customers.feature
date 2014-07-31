@@ -1,3 +1,4 @@
+@api
 Feature: Customers
 
   Scenario: Customers
@@ -5,6 +6,7 @@ Feature: Customers
      Then the response should be in JSON
      Then the response code should be equal to "200"
      Then the response content should be equal to:
+      """
       [
         {
           "id": "%my_sugar_id%",
@@ -17,3 +19,4 @@ Feature: Customers
             }
         }
       ]
+      """
