@@ -1,13 +1,7 @@
 default:
     extensions:
-        Sanpi\Behatch\Extension: ~
         Behat\MinkExtension:
           base_url: http://localhost:4000
           sessions:
             default:
               goutte: ~
-    suites:
-        default:
-            contexts:
-                - behatch:json
-                - behatch:rest

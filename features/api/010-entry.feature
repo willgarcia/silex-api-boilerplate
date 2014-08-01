@@ -2,15 +2,19 @@
 Feature: Entry point
 
   Scenario: Entry point GET
-    Given I send a "GET" request to "/api"
-     Then the response should be in JSON
-     Then the response code should be equal to "200"
-     Then the response content should be equal to:
+    Given I send a "GET" request to "/"
+     Then the response content type should be JSON
+     Then the response status code should be 200
+      And the response should be equal to:
       """
       {
-        "versions":
-        {
-          "_links": { "versions": "/api/versions" }
-        }
+          "_links": {
+              "versions": {
+                  "href": "/api/versions/"
+              },
+              "errorCodes": {
+                  "href": "/api/errors/"
+              }
+          }
       }
       """

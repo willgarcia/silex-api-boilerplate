@@ -4,7 +4,7 @@ Feature: License
   Scenario: License - Detail
     Given I send a "GET" request to "/api/customers/%my_sugar_id%/licenses/%id%" with an header "Authorization: Token MY-TOKEN"
     Then the response should be in JSON
-    Then the response code should be equal to "200"
+    Then the response status code should be 200
     Then the response content should be equal to:
       """
       {
@@ -26,4 +26,4 @@ Feature: License
   Scenario: License - Not found
     Given I send a "GET" request to "/api/customers/%my_sugar_id%/licenses/%invalid_id%" with an header "Authorization: Token MY-TOKEN"
     Then the response should be in JSON
-    Then the response code should be equal to "404"
+    Then the response status code should be equal to "404"

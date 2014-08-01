@@ -4,7 +4,7 @@ Feature: Licenses
   Scenario: Licenses
     Given I send a "GET" request to "/api/customers/%my_sugar_id%/licenses" with an header "Authorization: Token MY-TOKEN"
     Then the response should be in JSON
-    Then the response code should be equal to "200"
+    Then the response status code should be 200
     Then the response content should be equal to:
       """
       [
@@ -30,7 +30,7 @@ Feature: Licenses
   Scenario: Licenses - Filter type
     Given I send a "GET" request to "/api/customers/%my_sugar_id%/licenses?filter=bi" with an header "Authorization: Token MY-TOKEN"
     Then the response should be in JSON
-    Then the response code should be equal to "200"
+    Then the response status code should be 200
     Then the response content should be equal to:
       """
       [

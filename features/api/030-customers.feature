@@ -4,7 +4,7 @@ Feature: Customers
   Scenario: Customers
     Given I send a "GET" request to "/api/customers" with an header "Authorization: Token MY-TOKEN"
      Then the response should be in JSON
-     Then the response code should be equal to "200"
+     Then the response status code should be 200
      Then the response content should be equal to:
       """
       [

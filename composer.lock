@@ -4,8 +4,251 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fb4f1bbc6d4eedfc697cb8c45008d7f1",
+    "hash": "6d0e88b617e3ad1161a45076fe332b1a",
     "packages": [
+        {
+            "name": "dflydev/hawk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dflydev/dflydev-hawk.git",
+                "reference": "189dd738da21bd9906ff6d955b1e51bcbdbafcc6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dflydev/dflydev-hawk/zipball/189dd738da21bd9906ff6d955b1e51bcbdbafcc6",
+                "reference": "189dd738da21bd9906ff6d955b1e51bcbdbafcc6",
+                "shasum": ""
+            },
+            "require": {
+                "ircmaxell/random-lib": "1.0.*@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.21"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Dflydev\\Hawk": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dragonfly Development Inc.",
+                    "email": "info@dflydev.com",
+                    "homepage": "http://dflydev.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com",
+                    "homepage": "http://beausimensen.com"
+                }
+            ],
+            "description": "Hawk",
+            "keywords": [
+                "Authentication",
+                "bewit",
+                "hawk"
+            ],
+            "time": "2013-08-07 07:24:06"
+        },
+        {
+            "name": "dflydev/stack-authentication",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dflydev/dflydev-stack-authentication.git",
+                "reference": "62b092ac20517a03c41e847a15468f018f0d62e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dflydev/dflydev-stack-authentication/zipball/62b092ac20517a03c41e847a15468f018f0d62e7",
+                "reference": "62b092ac20517a03c41e847a15468f018f0d62e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.21",
+                "silex/silex": "1.1.*@dev",
+                "stack/builder": "~1.0@dev",
+                "stack/callable-http-kernel": "~1.0@dev",
+                "stack/inline": "~1.0@dev",
+                "symfony/browser-kit": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Dflydev\\Stack": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dragonfly Development Inc.",
+                    "email": "info@dflydev.com",
+                    "homepage": "http://dflydev.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com",
+                    "homepage": "http://beausimensen.com"
+                }
+            ],
+            "description": "STACK-2 Authentication Middlewares",
+            "keywords": [
+                "stack",
+                "stack-2"
+            ],
+            "time": "2013-08-02 03:57:47"
+        },
+        {
+            "name": "dflydev/stack-firewall",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dflydev/dflydev-stack-firewall.git",
+                "reference": "86eb1aadca95fa7d3c0a8863e9a98f5762173076"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dflydev/dflydev-stack-firewall/zipball/86eb1aadca95fa7d3c0a8863e9a98f5762173076",
+                "reference": "86eb1aadca95fa7d3c0a8863e9a98f5762173076",
+                "shasum": ""
+            },
+            "require": {
+                "dflydev/stack-authentication": "1.0.*@dev",
+                "php": ">=5.4.0",
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.21",
+                "silex/silex": "1.1.*@dev",
+                "stack/builder": "~1.0@dev",
+                "stack/callable-http-kernel": "~1.0@dev",
+                "stack/inline": "~1.0@dev",
+                "symfony/browser-kit": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Dflydev\\Stack": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dragonfly Development Inc.",
+                    "email": "info@dflydev.com",
+                    "homepage": "http://dflydev.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com",
+                    "homepage": "http://beausimensen.com"
+                }
+            ],
+            "description": "Firewall Stack middleware",
+            "keywords": [
+                "stack",
+                "stack-2"
+            ],
+            "time": "2013-11-01 16:25:27"
+        },
+        {
+            "name": "dflydev/stack-hawk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dflydev/dflydev-stack-hawk.git",
+                "reference": "bb4ba80dbea388ca7f0ddc22924a35c1acb344f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dflydev/dflydev-stack-hawk/zipball/bb4ba80dbea388ca7f0ddc22924a35c1acb344f6",
+                "reference": "bb4ba80dbea388ca7f0ddc22924a35c1acb344f6",
+                "shasum": ""
+            },
+            "require": {
+                "dflydev/hawk": "1.0.*@dev",
+                "dflydev/stack-authentication": "1.0.*@dev",
+                "dflydev/stack-firewall": "1.0.*@dev",
+                "php": ">=5.4.0",
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.21",
+                "silex/silex": "1.1.*@dev",
+                "stack/builder": "~1.0@dev",
+                "stack/callable-http-kernel": "~1.0@dev",
+                "stack/inline": "~1.0@dev",
+                "symfony/browser-kit": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Dflydev\\Stack": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dragonfly Development Inc.",
+                    "email": "info@dflydev.com",
+                    "homepage": "http://dflydev.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com",
+                    "homepage": "http://beausimensen.com"
+                }
+            ],
+            "description": "Hawk Stack middleware",
+            "keywords": [
+                "hawk",
+                "stack",
+                "stack-2"
+            ],
+            "time": "2013-08-02 04:22:10"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.0",
@@ -416,6 +659,100 @@
             "time": "2013-01-12 18:59:04"
         },
         {
+            "name": "ircmaxell/random-lib",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ircmaxell/RandomLib.git",
+                "reference": "0eaad991c1756842f26dfbcbc6effcabb5003d0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ircmaxell/RandomLib/zipball/0eaad991c1756842f26dfbcbc6effcabb5003d0a",
+                "reference": "0eaad991c1756842f26dfbcbc6effcabb5003d0a",
+                "shasum": ""
+            },
+            "require": {
+                "ircmaxell/security-lib": "1.0.*@dev",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.1.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "RandomLib": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anthony Ferrara",
+                    "email": "ircmaxell@ircmaxell.com",
+                    "homepage": "http://blog.ircmaxell.com"
+                }
+            ],
+            "description": "A Library For Generating Secure Random Numbers",
+            "homepage": "https://github.com/ircmaxell/PHP-RandomLib",
+            "keywords": [
+                "cryptography",
+                "random",
+                "random-numbers",
+                "random-strings"
+            ],
+            "time": "2013-07-30 17:40:57"
+        },
+        {
+            "name": "ircmaxell/security-lib",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ircmaxell/SecurityLib.git",
+                "reference": "80934de3c482dcafb46b5756e59ebece082b6dc7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ircmaxell/SecurityLib/zipball/80934de3c482dcafb46b5756e59ebece082b6dc7",
+                "reference": "80934de3c482dcafb46b5756e59ebece082b6dc7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SecurityLib": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anthony Ferrara",
+                    "email": "ircmaxell@ircmaxell.com",
+                    "homepage": "http://blog.ircmaxell.com"
+                }
+            ],
+            "description": "A Base Security Library",
+            "homepage": "https://github.com/ircmaxell/PHP-SecurityLib",
+            "time": "2013-04-30 18:00:34"
+        },
+        {
             "name": "jms/metadata",
             "version": "1.5.1",
             "source": {
@@ -639,6 +976,73 @@
                 "psr-3"
             ],
             "time": "2014-06-04 16:30:04"
+        },
+        {
+            "name": "pagerfanta/pagerfanta",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/Pagerfanta.git",
+                "reference": "ac1edfdf81c91a0f1471769071011ebf9b055421"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/ac1edfdf81c91a0f1471769071011ebf9b055421",
+                "reference": "ac1edfdf81c91a0f1471769071011ebf9b055421",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm": "1.0.*@dev",
+                "doctrine/orm": "2.3.*",
+                "doctrine/phpcr-odm": "1.*",
+                "jackalope/jackalope-doctrine-dbal": "1.*",
+                "jmikola/geojson": "1.0.*",
+                "mandango/mandango": "1.0.*@dev",
+                "phpunit/phpunit": "3.7.*",
+                "propel/propel1": "~1.6",
+                "solarium/solarium": "3.1.*"
+            },
+            "suggest": {
+                "doctrine/mongodb-odm": "To use the DoctrineODMMongoDBAdapter.",
+                "doctrine/orm": "To use the DoctrineORMAdapter.",
+                "doctrine/phpcr-odm": "To use the DoctrineODMPhpcrAdapter. >= 1.1.0",
+                "mandango/mandango": "To use the MandangoAdapter.",
+                "propel/propel1": "To use the PropelAdapter",
+                "solarium/solarium": "To use the SolariumAdapter."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pagerfanta\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pablo Díez",
+                    "email": "pablodip@gmail.com",
+                    "homepage": "http://github.com/pablodip"
+                }
+            ],
+            "description": "Pagination for PHP 5.3",
+            "keywords": [
+                "page",
+                "pagination",
+                "paginator",
+                "paging"
+            ],
+            "time": "2014-06-02 09:21:14"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -910,6 +1314,56 @@
                 "microframework"
             ],
             "time": "2014-07-01 10:16:56"
+        },
+        {
+            "name": "stack/builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stackphp/builder.git",
+                "reference": "d760dccb15e8db668c52359f8eb0ce3ecd37ce82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stackphp/builder/zipball/d760dccb15e8db668c52359f8eb0ce3ecd37ce82",
+                "reference": "d760dccb15e8db668c52359f8eb0ce3ecd37ce82",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.1"
+            },
+            "require-dev": {
+                "silex/silex": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Stack": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch",
+                    "homepage": "http://wiedler.ch/igor/"
+                }
+            ],
+            "description": "Builder for stack middlewares based on HttpKernelInterface.",
+            "keywords": [
+                "stack"
+            ],
+            "time": "2014-05-19 00:39:19"
         },
         {
             "name": "symfony/debug",
@@ -1741,6 +2195,47 @@
             "time": "2014-05-15 22:08:22"
         },
         {
+            "name": "camspiers/json-pretty",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/camspiers/json-pretty.git",
+                "reference": "2378ac3e8e798e9c55bd3c194238cde35af93817"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/camspiers/json-pretty/zipball/2378ac3e8e798e9c55bd3c194238cde35af93817",
+                "reference": "2378ac3e8e798e9c55bd3c194238cde35af93817",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "pimple/pimple": "Useful for dependency injection"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Camspiers": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cam Spiers",
+                    "email": "cameron@heyday.co.nz",
+                    "homepage": "https://github.com/camspiers/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Provides support for json pretty printing in php 5.3",
+            "time": "2014-01-24 12:31:00"
+        },
+        {
             "name": "fabpot/goutte",
             "version": "v2.0.1",
             "source": {
@@ -1976,52 +2471,6 @@
                 "schema"
             ],
             "time": "2014-03-05 15:03:52"
-        },
-        {
-            "name": "sanpi/behatch-contexts",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sanpii/behatch-contexts.git",
-                "reference": "5719a1fcac428eedd2da1f821ad4f9fc6d312986"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sanpii/behatch-contexts/zipball/5719a1fcac428eedd2da1f821ad4f9fc6d312986",
-                "reference": "5719a1fcac428eedd2da1f821ad4f9fc6d312986",
-                "shasum": ""
-            },
-            "require": {
-                "behat/behat": "3.*",
-                "behat/mink": "*",
-                "behat/mink-extension": "2.0.x-dev",
-                "justinrainbow/json-schema": "*",
-                "symfony/property-access": "~2.3"
-            },
-            "require-dev": {
-                "atoum/atoum": "*@dev",
-                "behat/mink-goutte-driver": "*",
-                "behat/mink-selenium2-driver": "*",
-                "kherge/box": "~2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Sanpi\\Behatch\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "beerware"
-            ],
-            "description": "Behatch contexts",
-            "keywords": [
-                "BDD",
-                "Behat",
-                "Context",
-                "Symfony2"
-            ],
-            "time": "2014-05-14 17:40:49"
         },
         {
             "name": "symfony/browser-kit",
@@ -2456,66 +2905,6 @@
             "time": "2014-07-09 09:05:48"
         },
         {
-            "name": "symfony/property-access",
-            "version": "v2.5.2",
-            "target-dir": "Symfony/Component/PropertyAccess",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/PropertyAccess.git",
-                "reference": "c80993206d5d842c46fc0bdb7da576a42845acfb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/PropertyAccess/zipball/c80993206d5d842c46fc0bdb7da576a42845acfb",
-                "reference": "c80993206d5d842c46fc0bdb7da576a42845acfb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\PropertyAccess\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony PropertyAccess Component",
-            "homepage": "http://symfony.com",
-            "keywords": [
-                "access",
-                "array",
-                "extraction",
-                "index",
-                "injection",
-                "object",
-                "property",
-                "property path",
-                "reflection"
-            ],
-            "time": "2014-07-09 09:05:48"
-        },
-        {
             "name": "symfony/translation",
             "version": "v2.5.2",
             "target-dir": "Symfony/Component/Translation",
@@ -2627,7 +3016,11 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "sanpi/behatch-contexts": 20,
+        "stack/builder": 20,
+        "dflydev/stack-hawk": 20,
+        "dflydev/hawk": 20,
+        "dflydev/stack-authentication": 20,
+        "dflydev/stack-firewall": 20,
         "behat/mink": 20,
         "behat/mink-extension": 20,
         "behat/mink-goutte-driver": 20,
