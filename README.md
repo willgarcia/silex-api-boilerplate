@@ -31,5 +31,5 @@ See http://php.net/manual/en/features.commandline.webserver.php
 # Tests
 
 ```shell
-bin/behat
+bin/behat tests/functional/features/
 ```
