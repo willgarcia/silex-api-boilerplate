@@ -1,9 +1,19 @@
 {
+    "name": "willgarcia/silex-api-bootstrap",
+    "description": "Silex application for getting started with your API.",
+    "license": "MIT",
+    "keywords": ["Bootstrap", "API", "Rest", "HATEOAS"],
+    "authors": [
+        {
+            "name": "William Garcia",
+            "email": "garcia.rodriguez.william@gmail.com"
+        }
+    ],
     "require": {
+        "php": ">=5.4",
         "silex/silex": "~1.0",
         "willdurand/hateoas": "~2.0",
         "monolog/monolog": ">=1.0.0",
-        "pagerfanta/pagerfanta": "~1.0",
         "stack/builder": "1.0.*@dev",
         "dflydev/stack-hawk": "1.0.*@dev",
         "dflydev/hawk": "1.0.*@dev",
@@ -16,7 +26,6 @@
         "behat/mink-extension": "2.0.*@dev",
         "behat/mink-goutte-driver": "1.1.*@dev",
         "behat/mink-browserkit-driver": "~1.2@dev",
-        "justinrainbow/json-schema": "1.3.*",
         "camspiers/json-pretty": "1.0.*",
         "phpmd/phpmd" : "2.*",
         "fabpot/php-cs-fixer": "0.*"
