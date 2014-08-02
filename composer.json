@@ -33,7 +33,8 @@
     "autoload": {
         "psr-0": {
             "Api": "src"
-        }
+        },
+        "classmap": ["tests/functional/bootstrap"]
     },
     "config": {
         "bin-dir": "bin/"

@@ -1,7 +1,15 @@
 default:
+    suites:
+        api_features:
+            contexts: [ FeatureContext ]
+            paths:
+                features: %paths.base%/tests/functional/features
+                bootstrap:  %paths.base%/tests/functional/bootstrap
+            filters:
+                tags: @api
     extensions:
         Behat\MinkExtension:
-          base_url: http://localhost:4000
-          sessions:
-            default:
-              goutte: ~
+            base_url: http://localhost:4000
+            sessions:
+                default:
+                    goutte: ~
