@@ -2,10 +2,9 @@
 
 namespace Api;
 
-use Silex\Application;
 use Silex\Application\MonologTrait;
 
-class Api extends Application
+class Application extends \Silex\Application
 {
     use MonologTrait;
 }
