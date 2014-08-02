@@ -60,7 +60,7 @@ class CustomersController
     {
         $licenses = array();
 
-        foreach($this->getLicenses() as $license) {
+        foreach ($this->getLicenses() as $license) {
             if ($license->getCustomer()->getId() == $request->get('cid')) {
                 $licenses[] = $license;
             }
@@ -76,7 +76,7 @@ class CustomersController
 
     public function licensesDetailAction(Request $request, Application $app)
     {
-        foreach($this->getLicenses() as $license) {
+        foreach ($this->getLicenses() as $license) {
             if ($license->getCustomer()->getId() == $request->get('cid')
                 && $license->getId() == $request->get('lid'))
             {

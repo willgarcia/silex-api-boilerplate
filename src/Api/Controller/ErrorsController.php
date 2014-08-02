@@ -5,7 +5,6 @@ namespace Api\Controller;
 use Api\Hateoas\Model\Error;
 use Hateoas\Configuration\Relation;
 use Hateoas\Representation\CollectionRepresentation;
-use Hateoas\Representation\VndErrorRepresentation;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
