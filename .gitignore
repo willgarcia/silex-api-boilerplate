@@ -1,3 +1,5 @@
 composer.phar
-vendor
-logs/
+vendor/
+logs/*
+node_modules/
+phpmd-report.html
