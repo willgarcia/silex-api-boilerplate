@@ -1,0 +1,12 @@
+{
+  "name": "silex-api-bootstrap",
+  "engines": {
+    "node": ">=0.10.29"
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1",
+    "exec-sync": "~0.1.6"
+  }
+}
