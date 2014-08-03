@@ -1,35 +1,64 @@
-# HAL kit
+README
+======
 
-This repository provides a starting point for building your API with a Silex application. It uses:
+silex-api-boilerplate
+---------------------
 
-* Silex application (http://silex.sensiolabs.org/)
-* HATEOAS API (bundle Hateoas)
-* API key authentication thanks to the Stackphp middleware Hawk (http://stackphp.com/middlewares/)
-* Monolog as a service provider (http://silex.sensiolabs.org/doc/providers/monolog.html)
-* Functional tests with Behat 3
+A starting point for building your RESTful API within a Silex application.
 
-And provides an example of API supporting the HAL format [http://stateless.co/hal_specification.html]
+Prerequisites
+-------------
 
-## Installation
+* PHP >=5.4
+* Grunt-cli >= 0.1.6
 
-```shell
-composer create-project wooshell/silex-api-bootstrap my-new-api
-```
+Components
+----------
 
-## PHP built-in web server
+This project uses the following components:
 
-```shell
-API_ENV=dev php -S 0.0.0.0:4000 web/index.php
-```
+* [Silex application](http://silex.sensiolabs.org/)
+* [HATEOAS API](https://github.com/willdurand/Hateoas)
+* [API key authentication](http://stackphp.com/middlewares/)
+* [Monolog as a service provider](http://silex.sensiolabs.org/doc/providers/monolog.html)
+* Functional tests with [Behat 3](https://github.com/Behat/Behat)
+
+API
+---
+
+The provided API stands as an example, and supports the [HAL format](http://stateless.co/hal_specification.html).
+
+API Endpoints (see `app/routing.php`) :
+
+    /api
+    /api/versions                                 # API versions
+    /api/errors                                   # API errors list
+    /api/errors/{code}                            # API error description
+    /api/{version}/customers                      # Customers list
+    /api/{version}/customers/{cid}                # Customer informations
+    /api/{version}/customers/{cid}/licenses       # Customer's licenses list
+    /api/{version}/customers/{cid}/licenses/{lid} # Customer license informations
+
+Installation
+------------
+
+    $ composer create-project wooshell/silex-api-boilerplate my-new-api
+    $ npm install
+    $ grunt
+
+
+Development
+-----------
+
+For development purposes only, you can serve the API by starting a PHP built-in web server:
+
+    $ API_ENV=dev php -S 0.0.0.0:4000 web/index.php
 
 See http://php.net/manual/en/features.commandline.webserver.php
 
-# API entry point
+From here, you can access to this URL: `http://localhost:4000`
 
-`http://localhost:4000`
+Tests
+-----
 
-# Tests
-
-```shell
-bin/behat tests/functional/features/
-```
+    $ bin/behat tests/functional/features/

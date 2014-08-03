@@ -1,8 +1,8 @@
 {
-    "name": "willgarcia/silex-api-bootstrap",
+    "name": "willgarcia/silex-api-boilerplate",
     "description": "Silex application for getting started with your API.",
     "license": "MIT",
-    "keywords": ["Bootstrap", "API", "Rest", "HATEOAS"],
+    "keywords": ["API", "Rest", "HATEOAS"],
     "authors": [
         {
             "name": "William Garcia",

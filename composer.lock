@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "530e94fb6eb814116077db6216421bd6",
+    "hash": "ebdcb19f3998a3ff8a99db0475c157a8",
     "packages": [
         {
             "name": "dflydev/hawk",
@@ -2221,16 +2221,16 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "v0.5.5",
+            "version": "v0.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/PHP-CS-Fixer.git",
-                "reference": "85d8f69bee216a30397c84b9f42c7328d1276d42"
+                "reference": "0e2801754124d6413b37a40f536f0422cad98b77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://features.github.com/repos/fabpot/PHP-CS-Fixer/zipball/85d8f69bee216a30397c84b9f42c7328d1276d42",
-                "reference": "85d8f69bee216a30397c84b9f42c7328d1276d42",
+                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/0e2801754124d6413b37a40f536f0422cad98b77",
+                "reference": "0e2801754124d6413b37a40f536f0422cad98b77",
                 "shasum": ""
             },
             "require": {
@@ -2265,20 +2265,20 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2014-07-29 18:07:04"
+            "time": "2014-08-02 05:48:15"
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "4.1.4",
+            "version": "4.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "5ae164dae6e65784286a698800190bc094407f7c"
+                "reference": "75e58ada121dffe1038331b808f8d3109499edc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://features.github.com/repos/guzzle/guzzle/zipball/5ae164dae6e65784286a698800190bc094407f7c",
-                "reference": "5ae164dae6e65784286a698800190bc094407f7c",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/75e58ada121dffe1038331b808f8d3109499edc4",
+                "reference": "75e58ada121dffe1038331b808f8d3109499edc4",
                 "shasum": ""
             },
             "require": {
@@ -2330,7 +2330,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2014-07-23 00:52:39"
+            "time": "2014-08-02 22:52:37"
         },
         {
             "name": "guzzlehttp/streams",
