@@ -16,7 +16,6 @@ $app = require __DIR__ . '/services.php';
 
 // routing
 $app = require __DIR__ . '/routing.php';
-$app = require __DIR__ . '/routing-verbs.php';
 
 // middlewares: authentication, vnd errors
 $app = require __DIR__ . '/middlewares.php';

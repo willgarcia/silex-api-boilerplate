@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Hateoas\Model;
+namespace Api\Lib\Hateoas\Model;
 
 use Hateoas\Configuration\Annotation as Hateoas;
 use Hateoas\Configuration\Relation;
@@ -24,6 +24,8 @@ class Error extends VndErrorRepresentation
      * @Serializer\Expose
      */
     private $description;
+
+    private $code;
 
     public function __construct($message, $logref = null, Relation $help = null, Relation $describes = null)
     {

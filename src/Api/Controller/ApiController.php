@@ -2,7 +2,7 @@
 
 namespace Api\Controller;
 
-use Api\Hateoas\Model\EntryPoint;
+use Api\Lib\Hateoas\Model\EntryPoint;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;

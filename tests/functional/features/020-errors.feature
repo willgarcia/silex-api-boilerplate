@@ -13,7 +13,7 @@ Feature: Errors
             {
               "message": "Header missing.",
               "logref": 0,
-              "description": "The header 'Authorization' must be defined (Authorization: apikey=XXX)",
+              "description": "The header 'Authorization' must be defined.",
               "_links": {
                   "self": {
                   "href": "/api/errors/0"
@@ -23,10 +23,30 @@ Feature: Errors
             {
               "message": "Invalid API Key.",
               "logref": 1,
-              "description": "The API key provided was not valid or has expired.",
+              "description": "The provided API key is not valid or has expired.",
               "_links": {
                 "self": {
                   "href": "/api/errors/1"
+                }
+              }
+            },
+            {
+              "message": "Undefined error.",
+              "logref": 2,
+              "description": "The provided error is not part of the API errors list.",
+              "_links": {
+                "self": {
+                  "href": "/api/errors/2"
+                }
+              }
+            },
+            {
+              "message": "Unknown entity.",
+              "logref": 3,
+              "description": "The provided entity is not valid or has been deleted.",
+              "_links": {
+                "self": {
+                  "href": "/api/errors/3"
                 }
               }
             }
@@ -44,7 +64,7 @@ Feature: Errors
       {
         "message": "Invalid API Key.",
         "logref": 1,
-        "description": "The API key provided was not valid or has expired.",
+        "description": "The provided API key is not valid or has expired.",
         "_links": {
           "self": {
             "href": "/api/errors/1"

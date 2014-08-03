@@ -2,8 +2,7 @@
 
 namespace Api\Controller;
 
-use Api\Hateoas\Model\Error;
-use Hateoas\Configuration\Relation;
+use Api\Lib\VndErrors;
 use Hateoas\Representation\CollectionRepresentation;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,29 +10,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ErrorsController
 {
-    private function getVndErrors()
-    {
-        return array(
-            new Error(
-                'Authentication needed',
-                0,
-                new Relation('help', null, null, array('title' => 'Header missing.')),
-                new Relation('describes', null, null, array('title' => 'The header \'Authorization\' must be defined (Authorization: apikey=XXX)'))
-            ),
-            new Error(
-                'Authentication failed',
-                1,
-                new Relation('help', null, null, array('title' => 'Invalid API Key.')),
-                new Relation('describes', null, null, array('title' => 'The API key provided was not valid or has expired.'))
-            )
-        );
-    }
-
     public function indexAction(Request $request, Application $app)
     {
         return new Response(
                 $app['serializer']->serialize(
-                    new CollectionRepresentation($this->getVndErrors()),
+                    new CollectionRepresentation($app['vnd.errors']->get()),
                     'json'
                 )
         );
@@ -41,17 +22,20 @@ class ErrorsController
 
     public function detailAction(Request $request, Application $app)
     {
-        $errors = $this->getVndErrors();
-        $code = $request->get('code');
+        $vndError = $app['vnd.errors']->get($request->get('code'));
+        $status = 200;
 
-        if (false === isset($errors[$code])) {
-            return new Response('', 404);
+        if (false === $vndError) {
+            $vndError = $app['vnd.errors']->get(VndErrors::UNKNOWN_ERROR);
+            $status = 404;
         }
 
         return new Response(
-            $app['serializer']->serialize($errors[$code],
-            'json'
-            )
+            $app['serializer']->serialize(
+                $vndError,
+                'json'
+            ),
+            $status
         );
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Hateoas\Model;
+namespace Api\Lib\Hateoas\Model;
 
 use Hateoas\Configuration\Annotation as Hateoas;
 use JMS\Serializer\Annotation as Serializer;
@@ -8,22 +8,24 @@ use JMS\Serializer\Annotation as Serializer;
 /**
  * @Serializer\XmlRoot("customers")
  *
- * @Hateoas\Relation("self", href = "expr('/api/' ~ object.getVersion() ~ '/customers/' ~ object.getId())")
- * @Hateoas\Relation("licenses", href = "expr('/api/' ~ object.getVersion() ~ '/customers/' ~ object.getId() ~ '/licenses' )")
+ * @Hateoas\Relation("self", href = "expr('/api/customers/' ~ object.getId())")
+ * @Hateoas\Relation("licenses", href = "expr('/api/customers/' ~ object.getId() ~ '/licenses' )")
  */
 class Customer
 {
     /** @Serializer\XmlAttribute */
     protected $id;
+
+    /** @Serializer\XmlAttribute */
     protected $name;
+
+    /** @Serializer\XmlAttribute */
     protected $updatedAt;
 
-    private $version;
-
-    public function __construct($id, $version)
+    public function __construct($id, $name)
     {
         $this->id = $id;
-        $this->version = $version;
+        $this->name = $name;
     }
 
     public function setId($id)
@@ -34,11 +36,6 @@ class Customer
     public function getId()
     {
         return $this->id;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
     }
 
     public function getName()
@@ -54,10 +51,5 @@ class Customer
     public function getUpdatedAt()
     {
         return $this->updatedAt;
-    }
-
-    public function getVersion()
-    {
-        return $this->version;
     }
 }

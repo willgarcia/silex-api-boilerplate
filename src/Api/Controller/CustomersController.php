@@ -2,8 +2,9 @@
 
 namespace Api\Controller;
 
-use Api\Hateoas\Model\Customer;
-use Api\Hateoas\Model\License;
+use Api\Lib\Hateoas\Model\Customer;
+use Api\Lib\Hateoas\Model\License;
+use Api\Lib\VndErrors;
 use Hateoas\Representation\CollectionRepresentation;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,20 +12,29 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CustomersController
 {
-    private $versionCompatibility = 1;
-
-    public function getCustomers()
+    private function getCustomers()
     {
         return array(
             new Customer(
                 12,
-                $this->versionCompatibility
+                'Customer 12'
             ),
             new Customer(
                 17,
-                $this->versionCompatibility
+                'Customer 17'
             )
         );
+    }
+
+    private function getCustomer($id)
+    {
+        foreach ($this->getCustomers() as $customer) {
+            if ($customer->getId() == $id) {
+                return $customer;
+            }
+        }
+
+        return false;
     }
 
     public function getLicenses()
@@ -32,7 +42,7 @@ class CustomersController
         $customers = $this->getCustomers();
 
         return array(
-            new License($customers[0], 1, 'bi'),
+            new License($customers[0], 1, 'software-1'),
         );
     }
 
@@ -48,9 +58,21 @@ class CustomersController
 
     public function detailAction(Request $request, Application $app)
     {
+        $customer = $this->getCustomer($request->get('cid'));
+
+        if (false == $customer) {
+            return new Response(
+                $app['serializer']->serialize(
+                    $app['vnd.errors']->get(VndErrors::ENTITY_NOTFOUND),
+                    'json'
+                ),
+                404
+            );
+        }
+
         return new Response(
             $app['serializer']->serialize(
-                new Customer($request->get('cid'), $this->versionCompatibility),
+                $customer,
                 'json'
             )
         );
@@ -90,7 +112,10 @@ class CustomersController
         }
 
         return new Response(
-            '',
+            $app['serializer']->serialize(
+                $app['vnd.errors']->get(VndErrors::ENTITY_NOTFOUND),
+                'json'
+            ),
             404
         );
     }

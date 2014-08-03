@@ -30,13 +30,36 @@ class FeatureContext extends  MinkContext implements SnippetAcceptingContext
     }
 
     /**
-     * @Given I send a :arg1 request to :arg2 with the features key :arg3
+     * @Given I send a :arg1 request to :arg2 with the API key :arg3
      */
     public function iSendARequestToWithTheApiKey($method, $url, $apiKey)
     {
+        $credentials = new Dflydev\Hawk\Credentials\Credentials(
+            'werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn',
+            'sha256',
+            'dh37fgj492je'
+        );
+
+        $client = Dflydev\Hawk\Client\ClientBuilder::create()
+            ->build();
+
+        $request = $client->createRequest(
+            $credentials,
+            'http://localhost:4000' . $url,
+            $method
+        );
+
         $client = $this->getSession()->getDriver()->getClient();
         $client->followRedirects(false);
-        $client->request($method, $this->locatePath($url), array(), array(), array('HTTP_AUTHORIZATION' => 'apikey=' . $apiKey));
+        $client->request(
+            $method,
+            $this->locatePath($url),
+            array(),
+            array(),
+            array(
+                'HTTP_AUTHORIZATION' => $request->header()->fieldValue()
+            )
+        );
         $client->followRedirects(true);
     }
 

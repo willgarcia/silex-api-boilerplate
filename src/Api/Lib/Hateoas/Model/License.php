@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Hateoas\Model;
+namespace Api\Lib\Hateoas\Model;
 
 use Hateoas\Configuration\Annotation as Hateoas;
 use JMS\Serializer\Annotation as Serializer;
@@ -8,10 +8,10 @@ use JMS\Serializer\Annotation as Serializer;
 /**
  * @Serializer\XmlRoot("licenses")
  *
- * @Hateoas\Relation("self", href = "expr('/api/' ~ object.getCustomer().getVersion() ~ '/customers/' ~ object.getCustomer().getId() ~ '/licenses/' ~ object.getId())")
- * @Hateoas\Relation("download", href = "expr('/api/' ~ object.getCustomer().getVersion() ~ '/customers/' ~ object.getCustomer().getId() ~ '/licenses/' ~ object.getId() ~ '/download/')")
- * @Hateoas\Relation("delete", href = "expr('/api/' ~ object.getCustomer().getVersion() ~ '/customers/' ~ object.getCustomer().getId() ~ '/licenses/' ~ object.getId() ~ '/delete/')")
- * @Hateoas\Relation("update", href = "expr('/api/' ~ object.getCustomer().getVersion() ~ '/customers/' ~ object.getCustomer().getId() ~ '/licenses/' ~ object.getId() ~ '/update/')")
+ * @Hateoas\Relation("self", href = "expr('/api/customers/' ~ object.getCustomer().getId() ~ '/licenses/' ~ object.getId())")
+ * @Hateoas\Relation("download", href = "expr('/api/customers/' ~ object.getCustomer().getId() ~ '/licenses/' ~ object.getId() ~ '/download/')")
+ * @Hateoas\Relation("delete", href = "expr('/api/customers/' ~ object.getCustomer().getId() ~ '/licenses/' ~ object.getId() ~ '/delete/')")
+ * @Hateoas\Relation("update", href = "expr('/api/customers/' ~ object.getCustomer().getId() ~ '/licenses/' ~ object.getId() ~ '/update/')")
  *
  */
 class License

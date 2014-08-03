@@ -31,13 +31,12 @@ The provided API stands as an example, and supports the [HAL format](http://stat
 API Endpoints (see `app/routing.php`) :
 
     /api
-    /api/versions                                 # API versions
-    /api/errors                                   # API errors list
-    /api/errors/{code}                            # API error description
-    /api/{version}/customers                      # Customers list
-    /api/{version}/customers/{cid}                # Customer informations
-    /api/{version}/customers/{cid}/licenses       # Customer's licenses list
-    /api/{version}/customers/{cid}/licenses/{lid} # Customer license informations
+    /api/errors                         # API errors list
+    /api/errors/{code}                  # API error description
+    /api/customers                      # Customers list                ; secured route
+    /api/customers/{cid}                # Customer informations         ; secured route
+    /api/customers/{cid}/licenses       # Customer's licenses list      ; secured route
+    /api/customers/{cid}/licenses/{lid} # Customer license informations ; secured route
 
 Installation
 ------------

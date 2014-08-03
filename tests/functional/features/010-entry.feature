@@ -9,8 +9,8 @@ Feature: Entry point
       """
       {
           "_links": {
-              "versions": {
-                  "href": "/api/versions/"
+              "customers": {
+                  "href": "/api/customers/"
               },
               "errorCodes": {
                   "href": "/api/errors/"
