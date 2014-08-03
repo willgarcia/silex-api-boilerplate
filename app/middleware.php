@@ -7,7 +7,6 @@ use Stack\Builder;
 $credentialsProvider = function ($id) {
     $validCredentials = new Credentials('test-key', 'sha256');
     if ($validCredentials === $id) {
-
         return $validCredentials;
     }
 };

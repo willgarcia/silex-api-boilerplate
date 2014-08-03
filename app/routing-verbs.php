@@ -8,11 +8,6 @@ $app->error(function (\Exception $e, $code) use ($app) {
             [ 'Content-Type' => 'text/plain' ]
         ));
     }
-    /*
-        return $app['view_handler']->handle(
-            new VndErrorRepresentation($e->getMessage()),
-            $code
-        );*/
 });
 
 return $app;
