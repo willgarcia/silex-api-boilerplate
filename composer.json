@@ -7,7 +7,14 @@
     "authors": [
         {
             "name": "William Garcia",
-            "email": "garcia.rodriguez.william@gmail.com"
+            "email": "garcia.rodriguez.william@gmail.com",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Julien Bianchi",
+            "email": "contact@jubianchi.fr",
+            "homepage": "http://jubianchi.fr",
+            "role": "Contributors"
         }
     ],
     "require": {
