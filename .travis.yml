@@ -1,0 +1,24 @@
+notifications:
+  email:
+    - garcia.rodriguez.william@gmail.com
+
+language: php
+
+php:
+  - 5.4
+
+cache:
+  directories:
+    - vendor
+    - node_modules
+
+git:
+  submodules: false
+
+before_script:
+  - composer install --no-interaction --prefer-source
+  - API_ENV=dev php -S localhost:4000 web/index.php &
+
+after_script:
+  - php vendor/bin/coveralls -v
+  - ./bin/behat tests/functional/features
