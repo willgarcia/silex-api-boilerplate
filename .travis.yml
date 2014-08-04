@@ -20,5 +20,4 @@ before_script:
   - API_ENV=dev php -S localhost:4000 web/index.php &
 
 after_script:
-  - php vendor/bin/coveralls -v
   - ./bin/behat tests/functional/features
