@@ -1,5 +1,6 @@
 {
     "name": "willgarcia/silex-api-boilerplate",
+    "version": "0.1.0",
     "description": "Silex application for getting started with your API.",
     "license": "MIT",
     "keywords": ["API", "Rest", "HATEOAS"],

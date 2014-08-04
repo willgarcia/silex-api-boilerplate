@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d3794c0c83197d543c79f65550152950",
+    "hash": "a2e77717591bd099a181869a1d0c91eb",
     "packages": [
         {
             "name": "dflydev/hawk",
