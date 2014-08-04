@@ -41,7 +41,7 @@ API Endpoints (see `app/routing.php`) :
 Installation
 ------------
 
-    $ composer create-project willgarcia/silex-api-boilerplate my-new-api
+    $ composer create-project willgarcia/silex-api-boilerplate my-new-api -s dev
     $ npm install
     $ grunt
 
