@@ -1,0 +1,3 @@
+<?php
+
+$app['exception_handler']->disable();

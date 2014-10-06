@@ -51,6 +51,7 @@ Development
 
 For development purposes only, you can serve the API by starting a PHP built-in web server:
 
+    $ cp app/env_dev.php-dist app/env_dev.php
     $ API_ENV=dev php -S 0.0.0.0:4000 web/index.php
 
 See http://php.net/manual/en/features.commandline.webserver.php
