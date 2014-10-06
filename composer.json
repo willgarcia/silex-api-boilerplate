@@ -21,12 +21,7 @@
         "php": ">=5.4",
         "silex/silex": "~1.0",
         "willdurand/hateoas": "~2.0",
-        "monolog/monolog": ">=1.0.0",
-        "stack/builder": "1.0.*@dev",
-        "dflydev/stack-hawk": "1.0.*@dev",
-        "dflydev/hawk": "1.0.*@dev",
-        "dflydev/stack-authentication": "1.0.*@dev",
-        "dflydev/stack-firewall": "1.0.*@dev"
+        "monolog/monolog": ">=1.0.0"
     },
     "require-dev": {
         "behat/behat": "~3.0",
