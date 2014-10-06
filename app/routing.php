@@ -1,7 +1,5 @@
 <?php
 
-use Symfony\Component\HttpFoundation\Response;
-
 $app->get('/', 'Api\Controller\ApiController::indexAction');
 $app->get('/api', 'Api\Controller\ApiController::indexAction');
 $app->get('/api/errors', 'Api\Controller\ErrorsController::indexAction');

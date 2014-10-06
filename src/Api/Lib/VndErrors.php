@@ -39,7 +39,7 @@ class VndErrors
                 'Entity does not exist',
                 self::ENTITY_NOTFOUND,
                 new Relation('help', null, null, array('title' => 'Unknown entity.')),
-                new Relation('describes', null, null, array('title' => 'The provided entity is not valid or has been deleted.'))
+                new Relation('describes', null, null, array('title' => 'The provided service does not exist or the service entity is not valid / has been deleted.'))
             )
         );
 

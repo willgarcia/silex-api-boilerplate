@@ -30,7 +30,7 @@ Feature: Customer
       {
       	"message": "Unknown entity.",
       	"logref": 3,
-      	"description": "The provided entity is not valid or has been deleted.",
+      	"description": "The provided service does not exist or the service entity is not valid \/ has been deleted.",
       	"_links": {
       		"self": {
       			"href": "\/api\/errors\/3"
