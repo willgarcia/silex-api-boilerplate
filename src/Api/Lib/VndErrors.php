@@ -21,13 +21,13 @@ class VndErrors
                 'Authentication needed',
                 self::AUTH_NEEDED,
                 new Relation('help', null, null, array('title' => 'Header missing.')),
-                new Relation('describes', null, null, array('title' => 'The header \'Authorization\' must be defined.'))
+                new Relation('describes', null, null, array('title' => 'Authorization header must be defined.'))
             ),
             new Error(
                 'Authentication failed',
                 self::AUTH_FAILED,
-                new Relation('help', null, null, array('title' => 'Invalid API Key.')),
-                new Relation('describes', null, null, array('title' => 'The provided API key is not valid or has expired.'))
+                new Relation('help', null, null, array('title' => 'Bad URL or Invalid API Key.')),
+                new Relation('describes', null, null, array('title' => 'The provided API URL is wrong / the provided API key is not valid or has expired.'))
             ),
             new Error(
                 'Error does not exist',

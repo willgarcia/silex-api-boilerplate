@@ -34,21 +34,6 @@ class FeatureContext extends  MinkContext implements SnippetAcceptingContext
      */
     public function iSendARequestToWithTheApiKey($method, $url, $apiKey)
     {
-        $credentials = new Dflydev\Hawk\Credentials\Credentials(
-            'werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn',
-            'sha256',
-            'dh37fgj492je'
-        );
-
-        $client = Dflydev\Hawk\Client\ClientBuilder::create()
-            ->build();
-
-        $request = $client->createRequest(
-            $credentials,
-            'http://localhost:4000' . $url,
-            $method
-        );
-
         $client = $this->getSession()->getDriver()->getClient();
         $client->followRedirects(false);
         $client->request(
@@ -57,7 +42,7 @@ class FeatureContext extends  MinkContext implements SnippetAcceptingContext
             array(),
             array(),
             array(
-                'HTTP_AUTHORIZATION' => $request->header()->fieldValue()
+                'HTTP_AUTHORIZATION' => $apiKey
             )
         );
         $client->followRedirects(true);

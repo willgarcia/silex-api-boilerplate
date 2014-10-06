@@ -19,7 +19,7 @@ This project uses the following components:
 
 * [Silex application](http://silex.sensiolabs.org/)
 * [HATEOAS API](https://github.com/willdurand/Hateoas)
-* [API key authentication](http://stackphp.com/middlewares/)
+* [API key authentication]
 * [Monolog as a service provider](http://silex.sensiolabs.org/doc/providers/monolog.html)
 * Functional tests with [Behat 3](https://github.com/Behat/Behat)
 
@@ -30,9 +30,9 @@ The provided API stands as an example, and supports the [HAL format](http://stat
 
 API Endpoints (see `app/routing.php`) :
 
-    /api
-    /api/errors                         # API errors list
-    /api/errors/{code}                  # API error description
+    /api                                # API entry point               ; secured route
+    /api/errors                         # API errors list               ; secured route
+    /api/errors/{code}                  # API error description         ; secured route
     /api/customers                      # Customers list                ; secured route
     /api/customers/{cid}                # Customer informations         ; secured route
     /api/customers/{cid}/licenses       # Customer's licenses list      ; secured route
