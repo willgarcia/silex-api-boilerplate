@@ -1,3 +1,5 @@
+app/env_dev.php
+app/env_prod.php
 bin/pdepend
 composer.phar
 vendor/
