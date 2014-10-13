@@ -64,3 +64,9 @@ Tests
 -----
 
     $ bin/behat tests/functional/features/
+
+License
+-------
+
+Silex-api-boilerplate is released under the MIT License. See the bundled LICENSE file for details.
+
