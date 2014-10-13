@@ -4,6 +4,7 @@ namespace Api\Lib;
 
 use Api\Lib\Hateoas\Model\Error;
 use Hateoas\Configuration\Relation;
+use mageekguy\atoum\tests\units\asserters\integer;
 
 class VndErrors
 {
@@ -53,7 +54,7 @@ class VndErrors
         }
 
         foreach ($this->errors as $error) {
-            if ($error->getLogref() == $code) {
+            if ($error->getLogref() === (int)$code) {
                 return $error;
             }
         }

@@ -1,6 +1,8 @@
 README
 ======
 
+[![Build Status](https://secure.travis-ci.org/willgarcia/silex-api-boilerplate.png)](http://travis-ci.org/willgarcia/silex-api-boilerplate) [![Dependency Status](https://www.versioneye.com/user/projects/543c0a73b2a9c5605f0003de/badge.svg?style=flat)](https://www.versioneye.com/user/projects/543c0a73b2a9c5605f0003de)
+
 silex-api-boilerplate
 ---------------------
 
