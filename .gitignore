@@ -1,8 +1,13 @@
 app/env_dev.php
 app/env_prod.php
 bin/pdepend
+bin/atoum
+bin/behat
+bin/php-cs-fixer
+bin/phpmd
 composer.phar
 vendor/
 logs/*
 node_modules/
 phpmd-report.html
+mageekguy.atoum.phar

@@ -25,8 +25,6 @@ class Error extends VndErrorRepresentation
      */
     private $description;
 
-    private $code;
-
     public function __construct($message, $logref = null, Relation $help = null, Relation $describes = null)
     {
         parent::__construct($message, $logref, $help, $describes);
